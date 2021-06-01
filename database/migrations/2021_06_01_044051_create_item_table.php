@@ -18,9 +18,9 @@ class CreateItemTable extends Migration
             $table->string('name');
             $table->string('class');
             $table->string('maker');
-            $table->string('content');
+            $table->string('content')->nullable();
             $table->string('quantity');
-            $table->string('picture');
+            $table->string('picture')->nullable();
             $table->string('price');
             $table->timestamps();
         });
