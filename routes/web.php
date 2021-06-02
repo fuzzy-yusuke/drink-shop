@@ -20,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return redirect('/login');
 });
+Route::get('/admin/top','AdminController@top')->name('admin.top');
+
 Route::get('/user/top','UserController@top')->name('user.top');
 Auth::routes();
 
