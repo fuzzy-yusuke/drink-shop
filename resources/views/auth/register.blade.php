@@ -39,7 +39,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <!--<div class="form-group row">
                             <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('階級') }}</label>
                         </div>
                             <div class="col-md-6">
@@ -47,7 +47,7 @@
                                     <option value="">選択してください</option>
                                     
                                 </select>
-                            </div>
+                            </div> -->
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('メールアドレス') }}</label>
