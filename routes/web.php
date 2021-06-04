@@ -28,6 +28,7 @@ Route::get('/list','ItemController@list')->name('item.list');
 Route::get('/show','ItemController@show')->name('item.show');
 Route::get('/basket','ListController@basket')->name('list.basket');
 Route::get('/history','ListController@history')->name('list.history');
+Route::get('/confirm','ListController@confirm')->name('list.confirm');
 
 Auth::routes();
 
