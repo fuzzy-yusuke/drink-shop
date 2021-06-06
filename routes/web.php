@@ -14,11 +14,13 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
+});*/
+
+Route::get('/', function () {
+    return redirect('/login');
 });
-
-
 
 Route::group(['middleware'=>['auth','verified']],function(){
 
@@ -35,4 +37,4 @@ Route::get('/confirm','ListController@confirm')->name('list.confirm');
 });
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
