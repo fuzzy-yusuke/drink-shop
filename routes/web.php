@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
-
 Route::get('/', function () {
-    return redirect('/login');
+    return view('welcome');
 });
+
+
+
+Route::group(['middleware'=>['auth','verified']],function(){
+
+
 Route::get('/admin/top','AdminController@top')->name('admin.top');
 
 Route::get('/user/top','UserController@top')->name('user.top');
@@ -29,7 +32,7 @@ Route::get('/show','ItemController@show')->name('item.show');
 Route::get('/basket','ListController@basket')->name('list.basket');
 Route::get('/history','ListController@history')->name('list.history');
 Route::get('/confirm','ListController@confirm')->name('list.confirm');
-
+});
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
