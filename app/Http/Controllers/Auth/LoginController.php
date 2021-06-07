@@ -31,8 +31,8 @@ class LoginController extends Controller
     protected $redirectTo = RouteServiceProvider::HOME;
     protected function authenticated(\Illuminate\Http\Request $request, $user)
     {
-        $tests=User::find($user->id)->role;
-        if($tests=='社員'){
+        $tests=User::find($user->role);
+        if($tests->role='一般社員'){
             return view('user.top');
         }else{
             return view('admin.top');
