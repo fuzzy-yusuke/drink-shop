@@ -32,7 +32,7 @@ class LoginController extends Controller
     protected function authenticated(\Illuminate\Http\Request $request, $user)
     {
         $tests=User::find($user->role);
-        if($tests->role='一般社員'){
+        if($tests='一般社員'){
             return view('user.top');
         }else{
             return view('admin.top');
