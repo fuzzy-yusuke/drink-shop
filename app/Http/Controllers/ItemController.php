@@ -21,5 +21,11 @@ class ItemController extends Controller
         ->save(picture('/picture/' . $picture));*/
         return view ('index',['items'=>$items]);
     }
+
+    public function show(Request $request,$id,Item $item)
+    {
+        $item=Item::find($id);
+        return view ('show',['item'=>$item]);
+    }
     
 }

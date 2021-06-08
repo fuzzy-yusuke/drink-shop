@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row">
         @foreach($items as $item)
-        <a href="#" class="col-lg-4 col-md-6">
+        <a href='{{ route("item.show",["id"=>$item->id])}}' class="col-lg-4 col-md-6">
             <div class="card">
                 <img src="{{ asset('/picture/'.$item->picture) }}" class="card-img">
                 <div class="card-body">
