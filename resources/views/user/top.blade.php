@@ -5,8 +5,8 @@
         <div class="col">
             <div class="mb-3">トップ</div>
             <ul>
-                <li>商品一覧</li>
-                <li>購入履歴</li>
+                <li><a href='{{ route("item.list")}}'>商品一覧</a></li>
+                <li><a href='{{ route("item.basket")}}'>購入履歴</a></li>
                 <li>パスワードを変更する</li>
             </ul>
         </div>
