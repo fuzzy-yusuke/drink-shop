@@ -5,6 +5,7 @@
         @foreach($items as $item)
         <a href="#" class="col-lg-4 col-md-6">
             <div class="card">
+                <img src="{{ asset($item->picture) }}" class="card-img">
                 <div class="card-body">
                     <p class="card-title">{{ $item->name}}</p>
                     <p class="card-text">\{{ $item->price}}</p>
