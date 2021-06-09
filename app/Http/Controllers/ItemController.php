@@ -22,9 +22,11 @@ class ItemController extends Controller
         return view ('index',['items'=>$items]);
     }
 
-    public function show(Request $request,$id,Item $item)
+    public function show($id)
     {
         $item=Item::find($id);
+        //dd($item);
+        
         return view ('show',['item'=>$item]);
     }
     

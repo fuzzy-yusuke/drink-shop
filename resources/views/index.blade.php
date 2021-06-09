@@ -3,8 +3,9 @@
 <div class="container">
     <div class="row">
         @foreach($items as $item)
-        <a href='{{ route("item.show",["id"=>$item->id])}}' class="col-lg-4 col-md-6">
+        
             <div class="card">
+            <a href="{{ route('item.show',['id' => $item -> id])}}" class="col-lg-4 col-md-6">
                 <img src="{{ asset('/picture/'.$item->picture) }}" class="card-img">
                 <div class="card-body">
                     <p class="card-title">{{ $item->name}}</p>
