@@ -2,6 +2,7 @@
 @section('content')
 <div class="container">
     <div class="row">
+    <h1>商品一覧</h1>
         @foreach($items as $item)
         
             <div class="card">
