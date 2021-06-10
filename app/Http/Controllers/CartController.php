@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ListController extends Controller
+class CartController extends Controller
 {
-    //
+    //買い物かごを扱う
 }

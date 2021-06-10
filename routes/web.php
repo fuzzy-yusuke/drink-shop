@@ -31,9 +31,9 @@ Route::get('/user/top','UserController@top')->name('user.top');
 
 Route::get('/index','ItemController@index')->name('item.index');
 Route::get('/{id}','ItemController@show')->name('item.show');
-Route::get('/basket','ListController@basket')->name('item.basket');
-Route::get('/history','ListController@history')->name('list.history');
-Route::get('/confirm','ListController@confirm')->name('list.confirm');
+Route::get('/basket','CartController@basket')->name('item.basket');
+Route::get('/history','CartController@history')->name('list.history');
+Route::get('/confirm','CartController@confirm')->name('list.confirm');
 });
 Auth::routes();
 
