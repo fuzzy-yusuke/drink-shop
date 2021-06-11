@@ -8,4 +8,20 @@
     <p>{{$item -> price}}円</p>
     <!--@php dd($item); @endphp -->
 </div>
+<!-- 画面遷移時にPOST送信する -->
+<form method="POST" action="{{ route('cart.addCart')}}" class="'d-inline">
+<select class="form-control" name="count">
+    <option value="placeholder">個数を選択してください</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+</select>
+
+<input name="item_id" type="hidden" value="{{$item -> id}}">
+<input name="user_id" type="hidden" value="{{$user -> id}}">
+<input type="submit" name="cart-in" class="btn btn-primary" value="買い物かごに入れる">
+
+</form>
 @endsection
