@@ -5,7 +5,7 @@
     <p><img src="{{asset('/picture/'.$item -> picture)}}"></p>
     <p>{{$item -> name}}</p>
     <p>{{$item -> content}}</p>
-    <p>{{$item -> price}}</p>
+    <p>{{$item -> price}}円</p>
     <!--@php dd($item); @endphp -->
 </div>
 @endsection
