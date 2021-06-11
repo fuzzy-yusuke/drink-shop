@@ -66,7 +66,7 @@ class ItemController extends Controller
 
         //POST送信された情報をsession保存する
         $request->session()->put('user_id',($request->user_id));
-        return redirect()->route('item.cart')
+        return redirect()->route('item.cart');
 
     }
 }
