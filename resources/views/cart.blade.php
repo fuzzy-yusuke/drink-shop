@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-    <h1>商品一覧</h1>
+    <h1>買い物かごの中身</h1>
         @foreach($carts as $cart)
         
             <div class="card">
@@ -11,6 +11,7 @@
                 <div class="card-body">
                     <p class="card-title">{{ $cart->item_id}}</p>
                     <p class="card-text">{{ $cart->user_id}}円</p>
+                    <p class="card-text">{{ $cart->quantity}}</p>
                 </div>
             </div>
         </a>

@@ -11,6 +11,6 @@ class CartController extends Controller
     //買い物かごを扱う
     public function index(){
         $carts=Cart::all();
-        return view('index',[carts => $carts]);
+        return view('index',['carts' => $carts]);
     }
 }
