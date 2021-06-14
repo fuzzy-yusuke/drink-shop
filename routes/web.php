@@ -33,17 +33,17 @@ Route::get('/index','ItemController@index')->name('item.index');
 Route::get('/{id}','ItemController@show')->name('item.show');
 
 //買い物かごに関するルーティング
-Route::resource('cartlist','ItemController',['only'=>['index']]);
+/*Route::resource('cartlist','ItemController',['only'=>['index']]);
 Route::post('/cart/addcart/cartlistremove','itemController@remove')->name('cart.remove');
 Route::post('/cart/addcart','itemController@addCart')->name('cart.addCart');
 Route::post('/cart/addcart/store','itemController@store')->name('cart.store');
+*/
 
 
 
-
-Route::get('/cart','CartController@cart')->name('item.cart');
-Route::get('/history','CartController@history')->name('list.history');
-Route::get('/confirm','CartController@confirm')->name('list.confirm');
+Route::get('/cart','CartController@index')->name('cart.index');
+Route::get('/history','CartController@history')->name('cart.history');
+Route::get('/confirm','CartController@confirm')->name('cart.confirm');
 });
 Auth::routes();
 

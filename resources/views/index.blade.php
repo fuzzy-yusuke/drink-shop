@@ -10,7 +10,7 @@
                 <img src="{{ asset('/picture/'.$item->picture) }}" class="card-img">
                 <div class="card-body">
                     <p class="card-title">{{ $item->name}}</p>
-                    <p class="card-text">\{{ $item->price}}</p>
+                    <p class="card-text">{{ $item->price}}円</p>
                 </div>
             </div>
         </a>
