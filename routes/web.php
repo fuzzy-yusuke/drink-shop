@@ -39,7 +39,7 @@ Route::post('/cart/addcart/store','itemController@store')->name('cart.store');
 
 
 
-Route::get('/cart','CartController@index')->name('cart.index');
+Route::get('/mycart','CartController@mycart')->name('cart.mycart');
 Route::get('/history','CartController@history')->name('cart.history');
 Route::get('/confirm','CartController@confirm')->name('cart.confirm');
 Route::get('/{id}','ItemController@show')->name('item.show');

@@ -9,8 +9,8 @@ use App\Cart;
 class CartController extends Controller
 {
     //買い物かごを扱う
-    public function index(){
+    public function mycart(){
         $carts=Cart::all();
-        return view('index',['carts' => $carts]);
+        return view('mycart',['carts' => $carts]);
     }
 }
