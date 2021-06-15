@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Cart extends Model
 {
+
+    //テーブル名明示
+    protected $table='cart';
+
     //Userモデルと関連づける
     public function user_id()
     {
