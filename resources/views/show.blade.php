@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
+    <div class="row">
     <h1>詳細</h1>
     <p><img src="{{asset('/picture/'.$item -> picture)}}"></p>
     <p>{{$item -> name}}</p>
@@ -26,5 +27,6 @@
             <input type="submit" name="cart-in" class="btn btn-primary" value="買い物かごに入れる">
         </div>
     </form>
+    </div>
 </div>
 @endsection
