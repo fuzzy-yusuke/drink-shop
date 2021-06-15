@@ -22,7 +22,7 @@ class ItemController extends Controller
         return view('index', ['items' => $items]);
     }
 
-    public function show($id)
+    public function show(Request $request,$id)
     {
         $item = Item::find($id);
         //dd($item);
