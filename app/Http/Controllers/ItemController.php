@@ -19,15 +19,14 @@ class ItemController extends Controller
             $constraint->aspectRatio();
         })
         ->save(picture('/picture/' . $picture));*/
-        return view ('index',['items'=>$items]);
+        return view('index', ['items' => $items]);
     }
 
     public function show($id)
     {
-        $item=Item::find($id);
+        $item = Item::find($id);
         //dd($item);
-        
-        return view ('show',['item'=>$item]);
+
+        return view('show', ['item' => $item]);
     }
-    
 }
