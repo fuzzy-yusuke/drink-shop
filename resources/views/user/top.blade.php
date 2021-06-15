@@ -6,7 +6,7 @@
             <div class="mb-3">トップ</div>
             <ul>
                 <li><a href='{{ route("item.index")}}'>商品一覧</a></li>
-                <li><a href='{{ route("cart.mycart")}}'>購入履歴</a></li>
+                <li><a href='{{ route("cart.mycart")}}'>買い物かご</a></li>
                 <li>パスワードを変更する</li>
             </ul>
         </div>
