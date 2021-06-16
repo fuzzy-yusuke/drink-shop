@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-    <h1>詳細</h1>
+    <h1>商品詳細</h1>
     <p><img src="{{asset('/picture/'.$item -> picture)}}"></p>
     <p>{{$item -> name}}</p>
     <p>{{$item -> content}}</p>
@@ -11,6 +11,7 @@
 
     <!-- 画面遷移時にPOST送信する -->
     <form method="POST" class="'d-inline">
+    @csrf
         <div class="form-group">
             <select class="form-control" name="count">
                 <option value="placeholder">個数を選択してください</option>
@@ -26,6 +27,7 @@
             <input name="user_id" type="hidden" value="{{$user -> id}}">
             <input type="submit" name="cart-in" class="btn btn-primary" value="買い物かごに入れる">
         </div>
+        <a class="text-center" href="{{route('item.index')}}">一覧に戻る</a>
     </form>
     </div>
 </div>
