@@ -8,7 +8,7 @@
     <p>{{$item->price}}円</p>
 </div>
 <!-- 画面遷移時にPOST送信する -->
-<form method="POST" class="'d-inline">
+<form action="{{route('cart.addCart')}}" method="POST" class="'d-inline">
     @csrf
     <div class="form-group">
         <select class="form-control" name="count">
