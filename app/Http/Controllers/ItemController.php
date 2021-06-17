@@ -26,9 +26,8 @@ class ItemController extends Controller
     public function show(Request $request, $id)
     {
         $item = Item::find($id);
-        $user = Auth::id();
         //dd($item);
 
-        return view('show', ['item' => $item, 'user' => $user]);
+        return view('show', ['item' => $item]);
     }
 }
