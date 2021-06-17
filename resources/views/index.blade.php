@@ -15,6 +15,7 @@
             </div>
         </a>
         @endforeach
+        {{$items -> links()}}
     </div>
 </div>
 @endsection

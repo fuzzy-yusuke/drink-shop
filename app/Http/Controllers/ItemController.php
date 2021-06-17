@@ -13,7 +13,8 @@ class ItemController extends Controller
     public function index(Request $request)
     {
         //itemテーブルに格納されているデータを一覧表示する
-        $items = Item::all();
+        //$items = Item::all();
+        $items=Item::Paginate(10);
         /*InterventionImage::make($items->picture)
         ->resize(300,300,function($constraint){
             $constraint->aspectRatio();
@@ -22,11 +23,12 @@ class ItemController extends Controller
         return view('index', ['items' => $items]);
     }
 
-    public function show(Request $request,$id)
+    public function show(Request $request, $id)
     {
         $item = Item::find($id);
+        $user = Auth::id();
         //dd($item);
 
-        return view('show', ['item' => $item]);
+        return view('show', ['item' => $item, 'user' => $user]);
     }
 }
