@@ -13,13 +13,7 @@ class ItemController extends Controller
     public function index(Request $request)
     {
         //itemテーブルに格納されているデータを一覧表示する
-        //$items = Item::all();
         $items=Item::Paginate(10);
-        /*InterventionImage::make($items->picture)
-        ->resize(300,300,function($constraint){
-            $constraint->aspectRatio();
-        })
-        ->save(picture('/picture/' . $picture));*/
         return view('index', ['items' => $items]);
     }
 

@@ -1,0 +1,35 @@
+.page-title {
+    position: relative;
+    color: #333333;
+    font-size: 30px;
+}
+.card-container {
+    display: grid; /* カードの横並び */
+    grid-template-columns: repeat(auto-fit, minmax(342px, 1fr)); /* gridの設定 */
+    gap: 20px 30px; /* カード同士の隙間 縦方向 横方向 */
+    margin: 109px auto 0;
+    text-align: start; /* カード内の中央寄せ解除 */
+}
+.card-item {
+    width: 100%;
+    max-width: 342px;
+    margin: 0 auto;
+    padding: 16px 16px 35px;
+}
+.card-img {
+    width: 50%;
+    max-width: 310px;
+    height: auto; 
+    vertical-align: bottom; /* 画像の下の余白を埋める */
+}
+.card-title {
+    margin-top: 20px;
+    color: #6F7579;
+    font-size: 20px;
+    line-height: 1.2;
+}
+.card-item p {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}

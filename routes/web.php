@@ -24,14 +24,13 @@ Route::get('/login', function () {
 
 Route::group(['middleware'=>['auth','verified']],function(){
 
-
-Route::get('/admin/top','AdminController@top')->name('admin.top');
-
 Route::get('/user/top','UserController@top')->name('user.top');
 
 Route::get('/index','ItemController@index')->name('item.index');
 
 Route::get('/show/{id}','ItemController@show')->name('item.show');
+
+Route::get('/new','ItemController@new')->name('item.new');
 
 
 });

@@ -19,6 +19,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!--cssファイルを読み込む-->
+    @stack('css')
 </head>
 
 <body>
