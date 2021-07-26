@@ -9,6 +9,7 @@
             @push('css')
             <link href="{{ asset('css/index.css')}}" rel="stylesheet">
             @endpush
+            
             @foreach($items as $item)
             <div class="card-item">
                 <a href="{{ route('item.show',['id' => $item -> id])}}">
