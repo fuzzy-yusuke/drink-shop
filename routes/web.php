@@ -30,11 +30,7 @@ Route::get('/admin/top','AdminController@top')->name('admin.top');
 Route::get('/user/top','UserController@top')->name('user.top');
 
 Route::get('/index','ItemController@index')->name('item.index');
-//買い物かごに関するルーティング
-Route::get('/mycart','CartController@mycart')->name('cart.mycart');
-Route::post('/mycart','CartController@addCart')->name('cart.addCart');
-Route::get('/history','CartController@history')->name('cart.history');
-Route::get('/confirm','CartController@confirm')->name('cart.confirm');
+
 Route::get('/show/{id}','ItemController@show')->name('item.show');
 
 
