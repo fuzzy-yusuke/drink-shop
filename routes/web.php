@@ -37,11 +37,7 @@ Route::get('/history','CartController@history')->name('cart.history');
 Route::get('/confirm','CartController@confirm')->name('cart.confirm');
 Route::get('/show/{id}','ItemController@show')->name('item.show');
 
-//パスワード変更
-Route::group(['middleware'=>['auth','web']],function(){
-Route::get('/password/edit','UserController@editPassword')->name('password.edit');
-Route::post('/password/update','UserController@updatePassword')->name('password.update');
-});
+
 });
 Auth::routes();
 
