@@ -36,6 +36,8 @@ Route::post('/mycart','CartController@addCart')->name('cart.addCart');
 Route::get('/history','CartController@history')->name('cart.history');
 Route::get('/confirm','CartController@confirm')->name('cart.confirm');
 Route::get('/show/{id}','ItemController@show')->name('item.show');
+
+
 });
 Auth::routes();
 
