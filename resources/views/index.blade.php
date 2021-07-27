@@ -3,8 +3,11 @@
 <div class="card-inner inner">
     <h2 class="page-title">商品一覧</h2>
     <form>
-        <select class="form-control" name="company">
-            <option selected="selected" value=""></option>
+        <select class="form-control" id="makers" name="makerId" value="{{$makerId}}">
+            <option value="">選択</option>
+            @foreach ($makers as $id => $maker)
+            <option value={{ $id }}>{{ $maker }}</option>
+            @endforeach
         </select>
     </form>
     {{$items -> links()}}
