@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ItemController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -27,6 +28,7 @@ Route::group(['middleware'=>['auth','verified']],function(){
 Route::get('/user/top','UserController@top')->name('user.top');
 
 Route::get('/index','ItemController@index')->name('item.index');
+Route::get('/search','ItemController@index')->name('item.search');
 
 Route::get('/show/{id}','ItemController@show')->name('item.show');
 
