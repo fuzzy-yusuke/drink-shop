@@ -32,6 +32,8 @@ Route::get('/search','ItemController@index')->name('item.search');
 
 Route::get('/show/{id}','ItemController@show')->name('item.show');
 
+Route::get('/pay','ItemController@pay')->name('item.pay');
+
 Route::get('/new','ItemController@new')->name('item.new');
 
 

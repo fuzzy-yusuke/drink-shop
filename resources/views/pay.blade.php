@@ -1,13 +1,10 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
-    @push('css')
-    <link href="{{ asset('css/show.css')}}" rel="stylesheet">
-    @endpush
     <h1>商品詳細</h1>
     <p><img src="{{asset('/picture/'.$item->picture)}}"></p>
     <p>{{$item->name}}</p>
-    <p class="content">{{$item->content}}</p>
+    <p>{{$item->content}}</p>
     <p>{{$item->price}}円</p>
 </div>
 <!-- 画面遷移時にPOST送信する -->
@@ -15,7 +12,8 @@
     @csrf
     <div class="form-row justify-content-center">
         <input name="item_id" type="hidden" value="{{$item -> id}}">
-        <input type="submit" name="cart-in" class="btn btn-primary" value="商品を購入する">
+        <input type="submit" name="cart-in" class="btn btn-primary" value="購入を確定する">
     </div>
+    <a class="text-center" href="{{route('item.index')}}">一覧に戻る</a>
 </form>
 @endsection

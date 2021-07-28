@@ -1,0 +1,13 @@
+.content {
+    font-size: 200%;
+    font-weight: bold;
+    position: absolute;
+    top: 250px;
+    left: 850px;
+    margin-top: 16px;
+    margin-left: 16px;
+    margin-bottom: 16px;
+    margin-right: 16px;
+    border: solid 1px #808080;
+    width: 540px;
+}

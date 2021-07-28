@@ -42,4 +42,8 @@ class ItemController extends Controller
 
         return view('show', ['item' => $item]);
     }
+
+    public function pay(Request $request){
+        
+    }
 }
