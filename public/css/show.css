@@ -11,3 +11,23 @@
     border: solid 1px #808080;
     width: 540px;
 }
+
+.name{
+    font-size: 200%;
+    position: absolute;
+    top: 550px;
+    left: 500px;
+}
+
+.price{
+    font-size: 200%;
+    position: absolute;
+    top: 600px;
+    left: 500px;
+}
+
+.btn {
+    position: absolute;
+    top: 650px;
+    left: 500px;
+}

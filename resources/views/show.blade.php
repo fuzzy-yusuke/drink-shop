@@ -6,9 +6,9 @@
     @endpush
     <h1>商品詳細</h1>
     <p><img src="{{asset('/picture/'.$item->picture)}}"></p>
-    <p>{{$item->name}}</p>
+    <p class="name">{{$item->name}}</p>
     <p class="content">{{$item->content}}</p>
-    <p>{{$item->price}}円</p>
+    <p class="price">{{$item->price}}円</p>
 </div>
 <!-- 画面遷移時にPOST送信する -->
 <form action="{{route('item.pay')}}" method="POST" class="'d-inline">
