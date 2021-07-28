@@ -17,10 +17,6 @@ class ChangeItemTableColumnMaker extends Migration
             //makerからmaker_idに変更
             $table->renameColumn('maker', 'maker_id');
         });
-        Schema::table('item', function (Blueprint $table) {
-            //makerからmaker_idに変更
-            $table->bigIncrements('maker_id')->default(NULL)->change();
-        });
     }
 
     /**
@@ -33,9 +29,6 @@ class ChangeItemTableColumnMaker extends Migration
         Schema::table('item', function (Blueprint $table) {
             //makerからmaker_idに変更
             $table->string('maker_id')->default(NULL)->change();
-        });
-        Schema::table('item', function (Blueprint $table) {
-            $table->renameColumn('maker_id', 'maker');
         });
         
     }
