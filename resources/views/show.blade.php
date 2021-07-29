@@ -11,10 +11,10 @@
     <p class="price">{{$item->price}}円</p>
 </div>
 <!-- 画面遷移時にPOST送信する -->
-<form action="{{route('item.pay')}}" method="POST" class="'d-inline">
+<form action="{{route('item.pay',['id'=>$item -> id])}}" method="GET" class="'d-inline">
     @csrf
     <div class="form-row justify-content-center">
-        <input name="item_id" type="hidden" value="{{$item -> id}}">
+        <input name="item_id" type="hidden" >
         <input type="submit" name="cart-in" class="btn btn-primary" value="商品を購入する">
     </div>
 </form>
