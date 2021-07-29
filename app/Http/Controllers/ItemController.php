@@ -47,4 +47,9 @@ class ItemController extends Controller
         $item=Item::find($id);
         return view('pay',['item'=>$item]);
     }
+
+    public function buy(Request $request,$id){
+        $item=Item::find($id);
+        return view('buy',['item'=>$item]);
+    }
 }

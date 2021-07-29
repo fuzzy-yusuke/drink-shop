@@ -1,23 +1,10 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col">
-            <table>
-                @foreach($items as $item)
-                <tr>
-                    <td>
-                            {{$item->picture}},
-                            {{$item->name}},
-                            {{$item->price}}
-                        </a>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div class="col">
-            <div id="example"></div>
-        </div>
-    </div>
+    @if($request<$item->price)
+    <p class="error">金額が足りません</p>
+    @else
+    <p>お買い上げありがとうございます。</p>
+    <p>おつり：{{$request - $item->price}}円</p>
 </div>
 @endsection
