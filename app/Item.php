@@ -14,4 +14,9 @@ class Item extends Model
     public function maker(){
         return $this->belongsTo(Maker::class);
     }
+
+    //バリデーションを設定
+    public static $rules=[
+        'picture'=>'image|file',
+    ];
 }

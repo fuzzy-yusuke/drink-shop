@@ -46,7 +46,7 @@ Route::get('/new','ItemController@new')->name('item.new');
 Route::post('/item','ItemController@store')->name('item.store');
 
 //追加完了画面
-Route::get('/complete/{id}','ItemController@complete')->name('item.complete');
+Route::get('/complete','ItemController@complete')->name('item.complete');
 
 
 });
