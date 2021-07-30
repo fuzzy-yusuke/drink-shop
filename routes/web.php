@@ -33,7 +33,7 @@ Route::get('/search','ItemController@index')->name('item.search');
 Route::get('/show/{id}','ItemController@show')->name('item.show');
 
 Route::get('/pay/{id}','ItemController@pay')->name('item.pay');
-Route::post('/pay','ItemController@buy')->name('item.buy');
+Route::post('/buy/{id}','ItemController@buy')->name('item.buy');
 
 Route::get('/new','ItemController@new')->name('item.new');
 

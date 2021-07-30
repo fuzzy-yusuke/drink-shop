@@ -15,12 +15,12 @@
         @csrf
         <input name="item_id" type="hidden" value="{{$item -> id}}">
         <input type="submit" name="cart-in" class="btn btn-primary" value="購入を確定する">
-    </form>
     <hr class="line">
-    <p class="price">金額：{{$item->price}}円</p>
-    <p class="payment">購入金額：
-        <input type="text" name="payment" size="15">円
+    <p class="price" name="price">金額：{{$item->price}}円</p>
+    <p class="paymoney">購入金額：
+        <input type="text" name="payment" size="15" value="">円
     </p>
+    </form>
 </div>
 <div class="item">
     <h2>ご購入内容</h2>

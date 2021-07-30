@@ -50,6 +50,8 @@ class ItemController extends Controller
 
     public function buy(Request $request,$id){
         $item=Item::find($id);
-        return view('buy',['item'=>$item]);
+        $payment=$request->get('payment');
+        //dd($payment);
+        return view('buy',['item'=>$item,'payment'=>$payment]);
     }
 }
