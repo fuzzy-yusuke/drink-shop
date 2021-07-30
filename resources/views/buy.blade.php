@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
     @if($payment < $item->price)
-    <p class="error">金額が足りません</p>
+    <p class="error">投入金額が足りません</p>
     @else
     <p>お買い上げありがとうございます。</p>
     <p>おつり：{{$payment - $item->price}}円</p>
