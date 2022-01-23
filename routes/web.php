@@ -43,9 +43,7 @@ Route::post('/buy/{id}','ItemController@buy')->name('item.buy');
 Route::get('/new','ItemController@new')->name('item.new');
 
 //追加完了画面
-Route::post('/item','ItemController@store')->name('item.store');
-
-//追加完了画面
+Route::post('/complete','ItemController@store')->name('item.store');
 Route::get('/complete','ItemController@complete')->name('item.complete');
 
 

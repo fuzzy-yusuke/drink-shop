@@ -2,6 +2,7 @@
 @section('content')
 <div class="card-inner inner">
     <h2 class="page-title">商品一覧</h2>
+    {{$items -> links()}}
     <form method="GET" action="{{ route('item.search')}}">
         <select class="form-control" id="makers" name="makerId" value="{{$makerId}}">
             <option value="">選択</option>
@@ -13,7 +14,6 @@
             <button type="submit" class="btn btn-primary ">検索</button>
         </div>
     </form>
-    {{$items -> links()}}
     <div class="card-container">
         <div class="row">
             @push('css')

@@ -2,15 +2,17 @@
     position: relative;
     color: #333333;
     font-size: 30px;
-    width: 200px;
+    width: 150px;
     
 }
 .card-container {
     display: grid; /* カードの横並び */
     grid-template-columns: repeat(auto-fit, minmax(342px, 1fr)); /* gridの設定 */
-    gap: 20px 30px; /* カード同士の隙間 縦方向 横方向 */
+    gap: 0px 30px; /* カード同士の隙間 縦方向 横方向 */
     margin: 109px auto 0;
     text-align: start; /* カード内の中央寄せ解除 */
+    position:absolute;
+    top: 50px;
 }
 .card-item {
     width: 100%;
@@ -20,7 +22,7 @@
 }
 .card-img {
     width: 50%;
-    max-width: 310px;
+    max-width: 135px;
     height: auto; 
     vertical-align: bottom; /* 画像の下の余白を埋める */
 }
@@ -37,7 +39,8 @@
 }
 
 .pagenation{
-    justify-content: center;
+    position:absolute;
+    top: 85px;
 }
 
 .form-control{

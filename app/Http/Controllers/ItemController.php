@@ -60,10 +60,11 @@ class ItemController extends Controller
     public function new(Request $request)
     {
         $item = new Item;
-        return view('new', ['item' => $item]);
+        $makers=Maker::get();
+        return view('new', ['item'=>$item])->with(['makers'=>$makers]);
     }
 
-    public function store(Request $request,$id)
+    public function store(Request $request)
     {
         //バリデーションの適用
         $this->validate($request, Item::$rules);
@@ -84,19 +85,17 @@ class ItemController extends Controller
         $maker = new maker();
         //登録画面で入力した情報をDBに格納させる
         $item->name = $request->name;
-        //メーカー名をmakerテーブルに格納させる
-        $maker->maker_name = $request->maker_name;
+        $item->maker_id = $request->makers;
+        $item->genre=$request->genre;
+        $item->price=$request->price;
         $item->quantity = $request->quantity;
         $item->content = $request->content;
         $item->picture = $fileName;
         $item->save();
-
         return redirect()->route('item.complete', ['id' => $item->id]);
     }
 
-    public function complete(Request $request, $id)
-    {
-        $item = Item::find($id);
-        return view('complete', ['item' => $item]);
+    public function complete(){
+        return view('complete');
     }
 }
